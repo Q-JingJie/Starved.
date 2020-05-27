@@ -1,0 +1,202 @@
+@import "~bootstrap/scss/bootstrap";
+
+$bg: #242424;
+$bg2: #323232;
+$accent: darken(#03ac13, 10%);
+$btnHeight: 50px;
+$primaryFont: whitesmoke;
+$secondaryFont: #0d0c0a;
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  position: relative;
+}
+
+.leaflet-container {
+  border-radius: 3%;
+}
+
+// Additional styling on top of react-bootstrap
+
+.sub-ctn-1 {
+  background-color: $bg;
+  min-height: 100vh;
+}
+
+// bootsrap xl
+@media screen and (max-width: 1200px) {
+  #logo {
+    padding-top: 5%;
+    width: 90vw;
+    height: 90vw;
+  }
+
+  footer {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #logo {
+    padding-top: 3%;
+  }
+
+  footer {
+    text-align: right;
+  }
+}
+
+#logo {
+  display: block;
+  margin: auto;
+  margin-top: 3vh;
+}
+
+#title-txt {
+  font-size: 28px;
+  color: $primaryFont;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 50px;
+  margin: auto;
+}
+
+.btn1 {
+  display: block;
+  height: $btnHeight;
+  width: 250px;
+  background-color: $accent;
+  border-style: none;
+  border-radius: $btnHeight / 2;
+
+  font-weight: bold;
+  color: $primaryFont;
+  font-size: 16px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 11px;
+}
+
+.btn1:focus {
+  outline: none;
+}
+
+.btn1:hover {
+  transform: scale(1.1);
+}
+
+.btn1:active {
+  background-color: darken($accent, 10%);
+}
+
+.center-map {
+  margin: 5vh auto;
+  min-width: 250px;
+  min-height: 250px;
+  max-width: 90vw;
+  max-height: 90vw;
+  width: 50vh;
+  height: 50vh;
+}
+
+.slider {
+  margin: auto;
+}
+
+.centered-txt {
+  display: block;
+  margin: auto;
+  color: $primaryFont;
+}
+
+.sub-ctn-2 {
+  background-color: $bg;
+  min-height: 100vh;
+}
+
+.res-row {
+  color: $secondaryFont;
+}
+
+.card-columns {
+  width: 100%;
+}
+
+#dis {
+  width: 100vw;
+  background-color: $accent;
+  color: $primaryFont;
+  font-weight: bold;
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  margin-bottom: 1%;
+}
+.card {
+  background-color: $bg2;
+  border: none;
+}
+
+.marker-map {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+
+.card-title {
+  color: $primaryFont;
+}
+
+.card-txt {
+  font-size: 12px;
+  color: darken($primaryFont, 10%);
+}
+
+.sub-ctn-3 {
+  background-color: darken($red, 20%);
+  color: $primaryFont;
+  font-weight: bold;
+  font-size: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 160px;
+  height: 20px;
+  background: linear-gradient(
+    to right,
+    darken($accent, 10%) 0%,
+    darken($accent, 10%) 100%
+  );
+  background-size: 150px 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: darken($primaryFont, 10%);
+  position: relative;
+  z-index: 3;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+footer {
+  width: 100vw;
+  color: $primaryFont;
+  font-size: 8px;
+  padding-right: 10px;
+
+  a {
+    color: $primaryFont;
+  }
+}
